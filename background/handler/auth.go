@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/YuminosukeSato/slopegram/background/model"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/x-color/simple-webapp/model"
 )
 
 type jwtCustomClaims struct {

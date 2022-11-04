@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/YuminosukeSato/slopegram/background/model"
 	"github.com/labstack/echo"
-	"github.com/x-color/simple-webapp/model"
 )
 
 func AddTodo(c echo.Context) error {

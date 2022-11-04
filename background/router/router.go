@@ -1,9 +1,9 @@
-package main
+package router
 
 import (
+	"github.com/YuminosukeSato/slopegram/background/handler"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/x-color/simple-webapp/handler"
 )
 
 func newRouter() *echo.Echo {
