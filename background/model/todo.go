@@ -29,11 +29,7 @@ func DeleteTodo(t *Todo) error {
 }
 
 func UpdateTodo(t *Todo) error {
-    rows := db.Model(t).Update(map[string]interface{}{
-        "name": t.Name,
-        "completed": t.Completed,
-    }).RowsAffected
-    if rows == 0 {
+    if rows := db.Model(t).Update(t.Name,t.Completed).RowsAffected; rows == 0 {
         return fmt.Errorf("Could not find Todo (%v) to update", t)
     }
     return nil

@@ -1,6 +1,8 @@
-package router
+package main
 
 import (
+	"net/http"
+
 	"github.com/YuminosukeSato/slopegram/background/handler"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
@@ -11,15 +13,12 @@ func newRouter() *echo.Echo {
 
     e.Use(middleware.Logger())
     e.Use(middleware.Recover())
-
-    e.Static("/assets", "public/assets")
-
-    e.File("/", "public/index.html")
-    e.File("/signup", "public/signup.html")
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:3000/", "http://localhost:3000/"},
+		AllowMethods: []string{http.MethodGet, http.MethodPut, http.MethodPost, http.MethodDelete},
+	}))
     e.POST("/signup", handler.Signup)
-    e.File("/login", "public/login.html")
     e.POST("/login", handler.Login)
-    e.File("/todos", "public/todos.html")
 
     api := e.Group("/api")
     api.Use(middleware.JWTWithConfig(handler.Config))
