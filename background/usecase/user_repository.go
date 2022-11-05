@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"echoSample/src/domain"
+	"github.com/YuminosukeSato/slopegram/background/domain"
 )
 
 type UserRepository interface {

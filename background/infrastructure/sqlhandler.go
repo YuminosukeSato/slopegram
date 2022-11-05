@@ -4,7 +4,7 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 
-	"echoSample/src/interfaces/database"
+	"github.com/YuminosukeSato/slopegram/background/interfaces/database"
 )
 
 type SqlHandler struct {

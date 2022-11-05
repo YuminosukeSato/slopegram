@@ -1,6 +1,6 @@
 package usecase
 
-import "echoSample/src/domain"
+import "github.com/YuminosukeSato/slopegram/background/domain"
 
 type UserInteractor struct {
     UserRepository UserRepository

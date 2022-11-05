@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"echoSample/src/domain"
-	"echoSample/src/interfaces/database"
-	"echoSample/src/usecase"
+	domain "github.com/YuminosukeSato/slopegram/background/domain"
+	"github.com/YuminosukeSato/slopegram/background/interfaces/database"
+	usecase "github.com/YuminosukeSato/slopegram/background/usecase"
 
 	"github.com/labstack/echo"
 )

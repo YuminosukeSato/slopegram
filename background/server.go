@@ -1,8 +1,8 @@
 package main
 
 import (
-	"echoSample/src/domain"
-	"echoSample/src/infrastructure"
+	"github.com/YuminosukeSato/slopegram/background/domain"
+	"github.com/YuminosukeSato/slopegram/background/infrastructure"
 
 	"github.com/labstack/echo/v4"
 	"gorm.io/driver/mysql"

@@ -1,8 +1,9 @@
 package infrastructure
 
 import (
-	controllers "echoSample/src/interfaces/api"
 	"net/http"
+
+	controllers "github.com/YuminosukeSato/slopegram/background/interfaces/api"
 
 	"github.com/labstack/echo"
 )
